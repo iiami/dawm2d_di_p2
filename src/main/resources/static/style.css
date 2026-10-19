@@ -1,0 +1,364 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #071a2d;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #ffffff;
+}
+
+:root {
+    --gjs-t-color-primary: #cf549e;
+    --gjs-t-color-secondary: #b9227d;
+    --gjs-t-color-accent: #ffb347;
+    --gjs-t-color-success: #28a745;
+    --gjs-t-color-warning: #ffc107;
+    --gjs-t-color-error: #dc3545;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.gjs-plg-flex-column {
+    flex-grow: 1;
+}
+
+#ivw4 {
+    flex-basis: 100%;
+}
+
+.gjs-plg-flex-row {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+#i16f {
+    width: 100%;
+}
+
+.gjs-t-body {
+    background-color: inherit;
+    color: inherit;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+#iv85 {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: block;
+    padding: 18px 18px 24px 18px;
+    background: #071a2d;
+}
+
+#isvfh {
+    flex-basis: auto;
+    width: 100%;
+}
+
+#idcnn {
+    padding: 10px;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+.gjs-t-h1 {
+    color: var(--gjs-t-color-secondary);
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.page-box {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.title-box {
+    background: #16283d;
+    border: 1px solid #223d5c;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+}
+
+.gjs-t-h2 {
+    color: #601843;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+}
+
+.title-main {
+    margin: 0;
+    font-size: 23px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.menu-box {
+    display: flex;
+    gap: 18px;
+    border: 1px solid #2d5b8a;
+    padding: 8px 16px;
+    margin-bottom: 14px;
+}
+
+.menu-btn {
+    display: inline-block;
+    flex: 1;
+    min-width: 110px;
+    padding: 9px 14px;
+    text-align: center;
+    background: #1b3558;
+    border: 1px solid #40658f;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    outline: none;
+}
+
+.gjs-t-button {
+    background-color: var(--gjs-t-color-primary);
+    color: white;
+    border-radius: 0.3rem;
+}
+
+.menu-btn.active {
+    background: #f0444a;
+    border-color: #f0444a;
+}
+
+.menu-btn:hover {
+    outline: 1px solid #8fb3d8;
+    background: #24456d;
+}
+
+.gjs-t-link {
+    color: var(--gjs-t-color-primary);
+    text-decoration: underline;
+}
+
+.menu-btn.active:hover {
+    background: #f25a60;
+    outline: 1px solid #ffd1d3;
+}
+
+.gjs-t-border {
+    border-radius: 0.3rem;
+    border-color: #e0e0e0;
+}
+
+.table-wrap {
+    border: 1px solid #2d5b8a;
+    margin-bottom: 18px;
+    overflow-x: auto;
+}
+
+.simple-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0b1f35;
+}
+
+.simple-table th,
+.simple-table td {
+    border: 1px solid #2d5b8a;
+    padding: 10px 8px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.simple-table th {
+    background: #1d3a61;
+    font-weight: 700;
+}
+
+.action-link {
+    color: #ff4b4b;
+    text-decoration: underline;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.action-link:hover {
+    outline: 1px solid #ff8d8d;
+}
+
+.bottom-actions {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 46px;
+}
+
+.basic-btn {
+    display: inline-block;
+    background: #1b3558;
+    border: 1px solid #0f1720;
+    color: #ffffff;
+    text-decoration: underline;
+    padding: 10px 18px;
+    min-width: 142px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.basic-btn.danger {
+    background: #f0444a;
+}
+
+.basic-btn:hover {
+    outline: 1px solid #8fb3d8;
+    background: #24456d;
+}
+
+.basic-btn.danger:hover {
+    background: #f25a60;
+    outline: 1px solid #ffd1d3;
+}
+
+.credits {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.credits p {
+    margin: 0;
+}
+
+/* Nuevos estilos para el formulario de Añadir Título */
+.form-subtitle {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-input,
+.form-select,
+.rating-input {
+    width: 100%;
+    padding: 10px;
+    background: #0b1f35;
+    border: 1px solid #2d5b8a;
+    color: #fff;
+}
+
+.rating-input {
+    width: 110px;
+    text-align: center;
+    padding: 8px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-subgroup {
+    margin-bottom: 15px;
+}
+
+.rating-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.credits-form {
+    margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+    .page-box {
+        max-width: 100%;
+    }
+
+    .menu-box {
+        gap: 12px;
+    }
+
+    .bottom-actions {
+        gap: 12px;
+    }
+
+    .title-main {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #iv85 {
+        padding: 12px;
+    }
+
+    .title-box {
+        padding: 12px;
+    }
+
+    .title-main {
+        font-size: 18px;
+    }
+
+    .menu-box {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .menu-btn:last-child {
+        margin-bottom: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bottom-actions {
+        display: block;
+    }
+
+    .basic-btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .basic-btn:last-child {
+        margin-bottom: 0;
+    }
+
+    .simple-table th,
+    .simple-table td {
+        font-size: 14px;
+        padding: 8px 6px;
+    }
+}

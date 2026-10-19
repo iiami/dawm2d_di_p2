@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body id="iut1">
+<div data-type-role="flex-row" id="iv85" class="gjs-plg-flex-row">
+    <div data-type-role="flex-column" id="isvfh" class="gjs-plg-flex-column">
+        <div id="idcnn">
+            <div class="page-box">
+                <div class="title-box">
+                    <h1 class="title-main">CineLista | Añadir Título</h1>
+                </div>
+
+                <nav class="menu-box">
+                    <a th:href="@{/}" class="menu-btn">Mi Lista</a>
+                    <a th:href="@{/anadir}" class="menu-btn active">Añadir título</a>
+                    <a href="#" class="menu-btn">Estrenos</a>
+                    <a href="#" class="menu-btn">Estadísticas</a>
+                </nav>
+
+                <form th:action="@{/guardar}" th:object="${pelicula}" method="post" class="form-container">
+                    <p class="form-subtitle">¡Añade un nuevo título!</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="titulo" class="form-label">Título:</label>
+                            <input type="text" id="titulo" th:field="*{titulo}" class="form-input" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="plataforma" class="form-label">Plataforma:</label>
+                            <input type="text" id="plataforma" th:field="*{plataforma}" class="form-input" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Estado:</label>
+                            <div class="radio-group">
+                                <label><input type="radio" th:field="*{estado}" value="Visto" /> Visto</label>
+                                <label><input type="radio" th:field="*{estado}" value="Viendo" /> Viendo</label>
+                                <label><input type="radio" th:field="*{estado}" value="Pendiente" /> Pendiente</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-subgroup">
+                                <label for="genero" class="form-label">Género:</label>
+                                <select id="genero" th:field="*{genero}" class="form-select">
+                                    <option value="">Seleccionar género</option>
+                                    <option value="Acción">Acción</option>
+                                    <option value="Drama">Drama</option>
+                                    <option value="Terror">Terror</option>
+                                    <option value="Ficción">Ficción</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="valoracion" class="form-label">Valoración:</label>
+                                <div class="rating-wrapper">
+                                    <input type="text" id="valoracion" th:field="*{valoracion}" placeholder="0 - 10" class="rating-input" />
+                                    <span>/ 10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-actions">
+                        <button type="submit" class="basic-btn danger" id="btn-guardar">[guardar]</button>
+                    </div>
+                </form>
+
+                <div class="credits credits-form">
+                    <p>Mayar Bouzidi P1</p>
+                    <p>Ami Gumaneh P2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

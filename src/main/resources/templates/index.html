@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body id="iut1">
+<div data-type-role="flex-row" id="iv85" class="gjs-plg-flex-row">
+  <div data-type-role="flex-column" id="isvfh" class="gjs-plg-flex-column">
+    <div id="idcnn">
+      <div class="page-box">
+        <div class="title-box">
+          <h1 class="title-main">CineLista | Mi Lista</h1>
+        </div>
+
+        <nav class="menu-box">
+          <a th:href="@{/}" class="menu-btn active">Mi Lista</a>
+          <a th:href="@{/anadir}" class="menu-btn">Añadir título</a>
+          <a href="#" class="menu-btn">Estrenos</a>
+          <a href="#" class="menu-btn">Estadísticas</a>
+        </nav>
+
+        <div class="table-wrap">
+          <table class="simple-table">
+            <thead>
+            <tr>
+              <th>Título</th>
+              <th>Género</th>
+              <th>Plataforma</th>
+              <th>Estado</th>
+              <th>Valoración</th>
+              <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Bucle de Thymeleaf para recorrer la lista de películas del controlador -->
+            <tr th:each="pelicula : ${peliculas}">
+              <td th:text="${pelicula.titulo}">Título</td>
+              <td th:text="${pelicula.genero}">Género</td>
+              <td th:text="${pelicula.plataforma}">Plataforma</td>
+              <td th:text="${pelicula.estado}">Estado</td>
+              <td th:text="${pelicula.valoracion} + ' / 10'">Valoración</td>
+              <td>
+                <!-- Enlace dinámico para eliminar usando el índice o ID -->
+                <a th:href="@{/eliminar/{id}(id=${pelicula.id})} " class="action-link">[eliminar]</a>
+                <a href="#" class="action-link">[editar]</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bottom-actions">
+
+          <a th:href="@{/anadirTitulo}" class="basic-btn" id="btn-anadir">[añadir]</a>
+          <a href="#" class="basic-btn danger">[eliminar seleccionados]</a>
+          <a href="#" class="basic-btn">[filtrar lista]</a>
+          <a href="#" class="basic-btn">[exportar lista]</a>
+        </div>
+
+        <div class="credits">
+          <p>Mayar Bouzidi P1</p>
+          <p>Ami Gumaneh P2</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
